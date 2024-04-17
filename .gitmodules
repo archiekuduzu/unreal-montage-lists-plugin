@@ -1,0 +1,3 @@
+[submodule "Plugins/ALS-Community"]
+	path = Plugins/ALS-Community
+	url = https://github.com/dyanikoglu/ALS-Community.git
