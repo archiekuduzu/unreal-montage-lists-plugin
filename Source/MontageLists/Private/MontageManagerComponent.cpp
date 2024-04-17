@@ -22,7 +22,7 @@ void UMontageManagerComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+		
 }
 
 
@@ -43,6 +43,7 @@ UMontageList* UMontageManagerComponent::FindMontageListByTag(FName input)
 			return list.MontageList;
 		}
 	}
-	UE_LOGFMT(LogMontageManagerComponent, Error, "MontageManager::FindMontageListByTag: Specified {0} not found! returned nullptr", input);
+	UE_LOGFMT(LogMontageManagerComponent, Error, "MontageManager::FindMontageListByTag: Specified {0} not found! returned nullptr!", input);
+	FFrame::KismetExecutionMessage(TEXT("MontageManager could not find specified MontageList by tag!"), ELogVerbosity::Error, FName("MontageManager"));
 	return nullptr;
 }
